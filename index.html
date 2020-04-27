@@ -1,45 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Four card feature section</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    body {
+      font-size: 15px;
+      font-family: 'Poppins', sans-serif;
+      max-width: 1440px;
+    }
+
+    .container {
+      text-align: center;
+      padding: 24px;
+    }
+
+    .container .subtitle {
+      font-weight: 200;
+      font-size: 24px;
+      color: hsl(229, 6%, 66%);
+    }
+
+    .container .title {
+      font-weight: 600;
+      font-size: 24px;
+      margin: 16px;
+    }
+
+    .container .description {
+      font-weight: 200;
+      line-height: 24px;
+      color: hsl(229, 6%, 66%);
+    }
+
+    .card {
+      font-weight: 200;
+      width: 360px;
+      margin: 12px auto;
+      padding: 12px;
+      text-align: initial;
+      border-radius: 6px;
+      -webkit-box-shadow: 6px 3px 25px -9px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 6px 3px 25px -9px rgba(0, 0, 0, 0.75);
+      box-shadow: 6px 3px 25px -9px rgba(0, 0, 0, 0.75);
+    }
+
+    .red {
+      border-top: 3px solid hsl(0, 78%, 62%);
+    }
+
+    .cyan {
+      border-top: 3px solid hsl(180, 62%, 55%);
+    }
+
+    .orange {
+      border-top: 3px solid hsl(34, 97%, 64%);
+    }
+
+    .blue {
+      border-top: 3px solid hsl(212, 86%, 64%);
+    }
+
+    .card h4 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 12px;
+    }
+
+    .card p {
+      margin: 12px;
+      color: hsl(229, 6%, 66%);
+    }
+
+    .card img {
+      display: block;
+      margin: 12px;
+      margin-left: auto;
+      text-align: right;
+    }
+
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
-  
-  Reliable, efficient delivery
-  Powered by Technology
+  <div class="container">
+    <h3 class="subtitle">Reliable, efficient delivery</h3>
+    <h1 class="title">Powered by Technology</h1>
+    <p class="description">
+      Our Artificial Intelligence powered tools use millions of project data<br>
+      points to ensure that your project is successful
+    </p>
 
-  Our Artificial Intelligence powered tools use millions of project data points 
-  to ensure that your project is successful
-
-  Supervisor
-  Monitors activity to identify project roadblocks
-
-  Team Builder
-  Scans our talent network to create the optimal team for your project
-
-  Karma
-  Regularly evaluates our talent to ensure quality
-
-  Calculator
-  Uses data from past projects to provide better delivery estimates
-
-  
+    <div class="card cyan">
+      <h4>Supervisor</h4>
+      <p>
+        Monitors activity to identify project roadblocks
+      </p>
+      <img src="images/icon-supervisor.svg" alt="Supervisor">
+    </div>
+    <div class="card red">
+      <h4>Team Builder</h4>
+      <p>
+        Scans our talent network to create the optimal team for your project
+      </p>
+      <img src="images/icon-team-builder.svg" alt="Team Builder">
+    </div>
+    <div class="card orange">
+      <h4>Karma</h4>
+      <p>
+        Regularly evaluates our talent to ensure quality
+      </p>
+      <img src="images/icon-karma.svg" alt="Karma">
+    </div>
+    <div class="card blue">
+      <h4>Calculator</h4>
+      <p>
+        Uses data from past projects to provide better delivery estimates
+      </p>
+      <img src="images/icon-calculator.svg" alt="Calculator">
+    </div>
+  </div>
   <footer>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/yunseop-dev/four-card-feature-section">Yunseop Kim</a>.
     </p>
   </footer>
 </body>
+
 </html>

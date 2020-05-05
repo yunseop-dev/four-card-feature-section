@@ -21,6 +21,9 @@
 
     .container {
       text-align: center;
+    }
+
+    .header {
       padding: 24px;
     }
 
@@ -42,10 +45,18 @@
       color: hsl(229, 6%, 66%);
     }
 
+    .card-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     .card {
+      position: relative;
       font-weight: 200;
-      width: 360px;
-      margin: 12px auto;
+      width: 300px;
+      height: 200px;
+      margin: 32px 12px;
       padding: 12px;
       text-align: initial;
       border-radius: 6px;
@@ -83,9 +94,9 @@
 
     .card img {
       display: block;
-      margin: 12px;
-      margin-left: auto;
-      text-align: right;
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
     }
 
 
@@ -97,45 +108,66 @@
     .attribution a {
       color: hsl(228, 45%, 44%);
     }
+
+    @media screen and (max-width: 375px) {
+      body {
+        max-width: 375px;
+      }
+
+      .container .title {
+        margin: 16px 0;
+      }
+
+      .card-wrapper {
+        display: inline-block;
+
+      }
+    }
   </style>
 </head>
 
 <body>
   <div class="container">
-    <h3 class="subtitle">Reliable, efficient delivery</h3>
-    <h1 class="title">Powered by Technology</h1>
-    <p class="description">
-      Our Artificial Intelligence powered tools use millions of project data<br>
-      points to ensure that your project is successful
-    </p>
+    <div class="header">
+      <h3 class="subtitle">Reliable, efficient delivery</h3>
+      <h1 class="title">Powered by Technology</h1>
+      <p class="description">
+        Our Artificial Intelligence powered tools use millions of project data<br>
+        points to ensure that your project is successful
+      </p>
+    </div>
 
-    <div class="card cyan">
-      <h4>Supervisor</h4>
-      <p>
-        Monitors activity to identify project roadblocks
-      </p>
-      <img src="images/icon-supervisor.svg" alt="Supervisor">
-    </div>
-    <div class="card red">
-      <h4>Team Builder</h4>
-      <p>
-        Scans our talent network to create the optimal team for your project
-      </p>
-      <img src="images/icon-team-builder.svg" alt="Team Builder">
-    </div>
-    <div class="card orange">
-      <h4>Karma</h4>
-      <p>
-        Regularly evaluates our talent to ensure quality
-      </p>
-      <img src="images/icon-karma.svg" alt="Karma">
-    </div>
-    <div class="card blue">
-      <h4>Calculator</h4>
-      <p>
-        Uses data from past projects to provide better delivery estimates
-      </p>
-      <img src="images/icon-calculator.svg" alt="Calculator">
+    <div class="card-wrapper">
+      <div class="card cyan">
+        <h4>Supervisor</h4>
+        <p>
+          Monitors activity to identify project roadblocks
+        </p>
+        <img src="images/icon-supervisor.svg" alt="Supervisor">
+      </div>
+      <div class="card-coupler">
+        <div class="card red">
+          <h4>Team Builder</h4>
+          <p>
+            Scans our talent network to create the optimal team for your project
+          </p>
+          <img src="images/icon-team-builder.svg" alt="Team Builder">
+        </div>
+        <div class="card orange">
+          <h4>Karma</h4>
+          <p>
+            Regularly evaluates our talent to ensure quality
+          </p>
+          <img src="images/icon-karma.svg" alt="Karma">
+        </div>
+      </div>
+      <div class="card blue">
+        <h4>Calculator</h4>
+        <p>
+          Uses data from past projects to provide better delivery estimates
+        </p>
+        <img src="images/icon-calculator.svg" alt="Calculator">
+      </div>
     </div>
   </div>
   <footer>
